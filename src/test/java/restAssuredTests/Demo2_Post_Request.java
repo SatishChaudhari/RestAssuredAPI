@@ -18,7 +18,7 @@ public class Demo2_Post_Request {
 
 
     @BeforeClass
-    public void postData(){
+    public void postData() {
         Fairy fairy = Fairy.create();
         Person person = fairy.person();
 
@@ -31,8 +31,9 @@ public class Demo2_Post_Request {
         RestAssured.baseURI = "http://mcaindia.bananaapps.co.uk";
         RestAssured.basePath = "/api/user/Register";
     }
+
     @Test
-    public void testPost(){
+    public void testPost() {
         given()
                 .contentType("application/json")
                 .body(map)
